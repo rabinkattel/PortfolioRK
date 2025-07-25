@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alex Rivera - Creative Portfolio</title>
+    <title>Rabin Kattel - Graphic Design Portfolio</title>
     <meta
       name="description"
-      content="Creative Portfolio of Alex Rivera - UI/UX Designer & Frontend Developer"
+      content="Creative Portfolio of Rabin Kattel - Graphic Designer Specializing in Branding, Social Media, and Print Design"
     />
 
     <!-- Fonts -->
@@ -27,28 +27,27 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/locomotive-scroll/4.1.4/locomotive-scroll.min.css"
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/locomotive-scroll/4.1.4/locomotive-scroll.min.js"></script>
-    <!-- Locomotive Scroll -->
     <link
       rel="stylesheet"
       href="style.css"
     />
   </head>
   <body>
-    <!-- Navigation -->
-    <nav class="nav">
-      <ul class="nav-links">
-        <li><a href="#home" class="nav-link active">Home</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#skills" class="nav-link">Skills</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
-    </nav>
-
-    <!-- Theme Toggle -->
-    <button class="theme-toggle" onclick="toggleTheme()">
-      <span id="theme-icon">🌙</span>
-    </button>
+    <!-- Navigation and Theme Toggle -->
+    <div class="nav-container">
+      <nav class="nav">
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" onclick="toggleTheme()">
+        <span id="theme-icon">🌙</span>
+      </button>
+    </div>
 
     <!-- Main Content -->
     <main data-scroll-container>
@@ -56,10 +55,9 @@
       <section id="home" class="hero" data-scroll-section>
         <div class="container">
           <div class="hero-content">
-            <h1 class="hero-title">Rabin Ka</h1>
+            <h1 class="hero-title">Creative Visionary</h1>
             <p class="hero-subtitle">
-              Creative UI/UX Designer & Frontend Developer crafting digital
-              experiences that inspire and engage.
+              Specializing in Branding, Social Media, and Print Design
             </p>
             <a href="#projects" class="hero-cta">
               View My Work
@@ -76,8 +74,8 @@
           <div class="section-header">
             <h2 class="section-title">About Me</h2>
             <p class="section-description">
-              Passionate about creating meaningful digital experiences through
-              thoughtful design and clean code.
+              Passionate about crafting bold brands, engaging social media
+              visuals, and stunning print designs
             </p>
           </div>
 
@@ -100,26 +98,10 @@
                   margin-bottom: 2rem;
                 "
               >
-                I'm Alex Rivera, a multidisciplinary designer and developer with
-                over 7 years of experience creating digital products that users
-                love. My journey started with a degree in Graphic Design from
-                Parsons, and evolved into a passion for creating seamless
-                digital experiences that bridge the gap between aesthetics and
-                functionality.
-              </p>
-              <p
-                style="
-                  font-size: 1.1rem;
-                  line-height: 1.8;
-                  color: var(--text-secondary);
-                  margin-bottom: 2rem;
-                "
-              >
-                Currently, I lead design at Nova Labs, where I work with
-                startups and Fortune 500 companies to create impactful digital
-                experiences. My approach combines user-centered design
-                principles with technical expertise, ensuring that every pixel
-                serves a purpose and every interaction feels intuitive.
+                I'm Rabin Kattel, a passionate graphic designer with over 5
+                years of experience in crafting bold brands, engaging social
+                media visuals, and stunning print designs. I blend creativity
+                with strategy to bring your vision to life.
               </p>
               <div style="display: flex; gap: 1rem; flex-wrap: wrap">
                 <span
@@ -130,7 +112,7 @@
                     border-radius: 1rem;
                     font-size: 0.9rem;
                   "
-                  >Design Thinking</span
+                  >Branding</span
                 >
                 <span
                   style="
@@ -140,7 +122,7 @@
                     border-radius: 1rem;
                     font-size: 0.9rem;
                   "
-                  >User Research</span
+                  >Social Media Design</span
                 >
                 <span
                   style="
@@ -150,7 +132,7 @@
                     border-radius: 1rem;
                     font-size: 0.9rem;
                   "
-                  >Frontend Development</span
+                  >Print Design</span
                 >
                 <span
                   style="
@@ -160,14 +142,15 @@
                     border-radius: 1rem;
                     font-size: 0.9rem;
                   "
-                  >Prototyping</span
+                  >Packaging Design</span
                 >
               </div>
             </div>
             <div class="bento-card about-image">
               <img
-                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
-                alt="Alex Rivera portrait"
+                id="about-portrait"
+                src="img/rabin-bnw.png"
+                alt="Rabin Kattel portrait"
               />
             </div>
           </div>
@@ -178,76 +161,118 @@
       <section id="projects" class="bento-section" data-scroll-section>
         <div class="container">
           <div class="section-header">
-            <h2 class="section-title">Featured Projects</h2>
+            <h2 class="section-title">Showcase of Creativity</h2>
             <p class="section-description">
-              A selection of recent work that showcases my approach to design
-              and development.
+              A selection of recent work that showcases my approach to graphic
+              design
             </p>
           </div>
 
           <div class="projects-grid">
             <div class="project-card">
               <div class="project-image">
-                <img
-                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-                  alt="Brand Identity Project"
-                />
+                <img src="img/img-041.jpg" alt="Visionary Branding" />
               </div>
               <div class="project-content">
-                <h3 class="project-title">Zenith Brand System</h3>
+                <h3 class="project-title">Logo and Branding</h3>
                 <p class="project-description">
-                  Comprehensive brand identity for a sustainable fashion
-                  startup, including logo design, typography system, color
-                  palette, and brand guidelines documentation.
+                  Designing bold logos and cohesive visual identities that
+                  define your brand's essence
                 </p>
                 <div class="project-tags">
-                  <span class="project-tag">Brand Identity</span>
-                  <span class="project-tag">Visual Design</span>
-                  <span class="project-tag">Art Direction</span>
+                  <span class="project-tag">Branding</span>
+                  <span class="project-tag">Logo Design</span>
+                  <span class="project-tag">Visual Identity</span>
                 </div>
               </div>
             </div>
 
             <div class="project-card">
               <div class="project-image">
-                <img
-                  src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-                  alt="Mobile Banking App"
-                />
+                <img src="img/img-031.jpg" alt="Social Media Graphics" />
               </div>
               <div class="project-content">
-                <h3 class="project-title">Horizon Banking App</h3>
+                <h3 class="project-title">Social Media Graphics</h3>
                 <p class="project-description">
-                  End-to-end design of a mobile banking application focused on
-                  financial literacy, featuring customizable dashboards,
-                  spending analytics, and educational tools.
+                  Eye-catching visuals crafted for platforms like Instagram,
+                  Twitter, and LinkedIn to boost engagement
                 </p>
                 <div class="project-tags">
-                  <span class="project-tag">UI/UX Design</span>
-                  <span class="project-tag">Mobile App</span>
-                  <span class="project-tag">Prototyping</span>
+                  <span class="project-tag">Social Media</span>
+                  <span class="project-tag">Graphic Design</span>
+                  <span class="project-tag">Ad Visuals</span>
                 </div>
               </div>
             </div>
 
             <div class="project-card">
               <div class="project-image">
-                <img
-                  src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-                  alt="E-commerce Platform"
-                />
+                <img src="img/img-014.jpg" alt="Printable Designs" />
               </div>
               <div class="project-content">
-                <h3 class="project-title">Bloom E-commerce</h3>
+                <h3 class="project-title">Printable Designs</h3>
                 <p class="project-description">
-                  Custom e-commerce platform for an independent bookstore,
-                  featuring personalized recommendations, AR book previews, and
-                  a community-driven review system.
+                  Creating stunning posters, flyers, and banners that make a
+                  lasting impression in print
                 </p>
                 <div class="project-tags">
-                  <span class="project-tag">Web Development</span>
-                  <span class="project-tag">E-commerce</span>
-                  <span class="project-tag">React</span>
+                  <span class="project-tag">Print Design</span>
+                  <span class="project-tag">Posters</span>
+                  <span class="project-tag">Flyers</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-image">
+                <img src="img/img-012.jpg" alt="Packaging Design" />
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Packaging Design</h3>
+                <p class="project-description">
+                  Innovative packaging solutions that combine aesthetics and
+                  functionality to stand out on shelves
+                </p>
+                <div class="project-tags">
+                  <span class="project-tag">Packaging</span>
+                  <span class="project-tag">Product Design</span>
+                  <span class="project-tag">Branding</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-image">
+                <img src="img/img-013.jpg" alt="Digital Illustrations" />
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Digital Illustrations</h3>
+                <p class="project-description">
+                  Vibrant, custom illustrations that bring stories and concepts
+                  to life with artistic flair
+                </p>
+                <div class="project-tags">
+                  <span class="project-tag">Illustration</span>
+                  <span class="project-tag">Digital Art</span>
+                  <span class="project-tag">Children’s Books</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-image">
+                <img src="img/img-06.jpg" alt="Editorial Design" />
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Editorial Design</h3>
+                <p class="project-description">
+                  Compelling layouts for magazines, brochures, and books that
+                  captivate and inform readers
+                </p>
+                <div class="project-tags">
+                  <span class="project-tag">Editorial</span>
+                  <span class="project-tag">Magazine Layout</span>
+                  <span class="project-tag">Brochures</span>
                 </div>
               </div>
             </div>
@@ -267,51 +292,27 @@
                   margin-bottom: 1rem;
                 "
               >
-                Skills & Tools
+                Skills & Expertise
               </h3>
               <p style="color: var(--text-secondary); margin-bottom: 2rem">
-                Technologies and tools I use to bring ideas to life.
+                Areas of expertise I use to bring ideas to life
               </p>
               <div class="skills-grid">
                 <div class="skill-item">
                   <div class="skill-icon">🎨</div>
-                  <div>Figma</div>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-icon">⚛️</div>
-                  <div>React</div>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-icon">💻</div>
-                  <div>TypeScript</div>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-icon">🎭</div>
-                  <div>Framer</div>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-icon">⚡</div>
-                  <div>Next.js</div>
+                  <div>Branding</div>
                 </div>
                 <div class="skill-item">
                   <div class="skill-icon">📱</div>
-                  <div>React Native</div>
+                  <div>Social Media Design</div>
                 </div>
                 <div class="skill-item">
-                  <div class="skill-icon">🎨</div>
-                  <div>Adobe CC</div>
+                  <div class="skill-icon">🖨️</div>
+                  <div>Print Design</div>
                 </div>
                 <div class="skill-item">
-                  <div class="skill-icon">📊</div>
-                  <div>Webflow</div>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-icon">🎪</div>
-                  <div>GSAP</div>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-icon">📐</div>
-                  <div>Three.js</div>
+                  <div class="skill-icon">📦</div>
+                  <div>Packaging Design</div>
                 </div>
               </div>
             </div>
@@ -324,17 +325,15 @@
                   margin-bottom: 2rem;
                 "
               >
-                What People Say
+                Client Feedback
               </h3>
               <div class="testimonial-content">
                 <p class="testimonial-quote">
-                  "Alex transformed our digital presence with their exceptional
-                  design skills and technical expertise. They delivered a
-                  product that not only met but exceeded our expectations,
-                  resulting in a 40% increase in user engagement."
+                  "The social media graphics Rabin designed significantly
+                  boosted our engagement rates."
                 </p>
-                <div class="testimonial-author">Sarah Chen</div>
-                <div class="testimonial-role">Product Manager, TechCorp</div>
+                <div class="testimonial-author">Babin Kharel</div>
+                <div class="testimonial-role">Manager, Maverick Pvt. Ltd.</div>
               </div>
             </div>
           </div>
@@ -401,12 +400,12 @@
                 Connect with me
               </h3>
               <div class="social-links">
-                <a href="mailto:alex@rivera.design" class="social-link">
+                <a href="mailto:kattelrabin3@gmail.com" class="social-link">
                   <span>📧</span>
-                  <span>alex@rivera.design</span>
+                  <span>E Mail</span>
                 </a>
                 <a
-                  href="https://linkedin.com/in/alexrivera"
+                  href="https://www.linkedin.com/in/rabin-kattel/"
                   target="_blank"
                   class="social-link"
                 >
@@ -414,28 +413,29 @@
                   <span>LinkedIn</span>
                 </a>
                 <a
-                  href="https://github.com/alexrivera"
-                  target="_blank"
-                  class="social-link"
-                >
-                  <span>🐙</span>
-                  <span>GitHub</span>
-                </a>
-                <a
-                  href="https://dribbble.com/alexrivera"
+                  href="https://www.instagram.com/rawbeen_blends/"
                   target="_blank"
                   class="social-link"
                 >
                   <span>🎨</span>
-                  <span>Dribbble</span>
+                  <span>Instagram</span>
                 </a>
                 <a
-                  href="https://twitter.com/alexrivera"
+                  href="https://www.instagram.com/rawbeen_collects/"
                   target="_blank"
                   class="social-link"
                 >
-                  <span>🐦</span>
-                  <span>Twitter</span>
+                  <span>📷</span>
+                  <span>Hobby</span>
+                </a>
+                <a
+                  href="CV-Rabin.pdf"
+                  target="_blank"
+                  class="social-link"
+                  download
+                >
+                  <span>📄</span>
+                  <span>Download CV</span>
                 </a>
               </div>
             </div>
@@ -449,15 +449,18 @@
       function toggleTheme() {
         const html = document.documentElement;
         const themeIcon = document.getElementById("theme-icon");
+        const aboutPortrait = document.getElementById("about-portrait");
 
         if (html.getAttribute("data-theme") === "dark") {
           html.removeAttribute("data-theme");
           themeIcon.textContent = "🌙";
           localStorage.setItem("theme", "light");
+          aboutPortrait.src = "img/rabin-reg.png";
         } else {
           html.setAttribute("data-theme", "dark");
           themeIcon.textContent = "☀️";
           localStorage.setItem("theme", "dark");
+          aboutPortrait.src = "img/rabin-bnw.png";
         }
       }
 
@@ -467,10 +470,14 @@
         const prefersDark = window.matchMedia(
           "(prefers-color-scheme: dark)"
         ).matches;
+        const aboutPortrait = document.getElementById("about-portrait");
 
         if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
           document.documentElement.setAttribute("data-theme", "dark");
           document.getElementById("theme-icon").textContent = "☀️";
+          aboutPortrait.src = "img/rabin-bnw.png";
+        } else {
+          aboutPortrait.src = "img/rabin-reg.png";
         }
       }
 
@@ -562,18 +569,11 @@
         gsap.registerPlugin(ScrollTrigger);
 
         // Minimal animations to avoid hiding text
-        gsap.from(".nav", {
+        gsap.from(".nav-container", {
           duration: 1,
           y: -100,
           ease: "power3.out",
-          onComplete: () => gsap.set(".nav", { clearProps: "all" }),
-        });
-
-        gsap.from(".theme-toggle", {
-          duration: 0.8,
-          scale: 0,
-          ease: "back.out(1.7)",
-          onComplete: () => gsap.set(".theme-toggle", { clearProps: "all" }),
+          onComplete: () => gsap.set(".nav-container", { clearProps: "all" }),
         });
       }
 
@@ -693,21 +693,15 @@
         const testimonials = [
           {
             quote:
-              "Alex brought our vision to life with incredible attention to detail and user experience. The final product exceeded all expectations.",
-            author: "Sarah Chen",
-            role: "Product Manager, TechCorp",
+              "The social media graphics Rabin designed significantly boosted our engagement rates.",
+            author: "Babin Kharel",
+            role: "Manager, Maverick Pvt. Ltd.",
           },
           {
             quote:
-              "Working with Alex was a game-changer for our startup. The design thinking and technical execution were outstanding.",
-            author: "Michael Rodriguez",
-            role: "CEO, InnovateNow",
-          },
-          {
-            quote:
-              "Alex's ability to translate complex ideas into intuitive interfaces is remarkable. Highly recommended!",
-            author: "Emily Johnson",
-            role: "Design Director, CreativeLab",
+              "Rabin’s work on our logo has given boosted our studio's identification, exceeding our expectations.",
+            author: "John Doe",
+            role: "Creative Director, Studio XYZ",
           },
         ];
 
