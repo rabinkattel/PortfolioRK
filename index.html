@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alex Rivera - Creative Portfolio</title>
+    <meta
+      name="description"
+      content="Creative Portfolio of Alex Rivera - UI/UX Designer & Frontend Developer"
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Locomotive Scroll -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/locomotive-scroll/4.1.4/locomotive-scroll.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/locomotive-scroll/4.1.4/locomotive-scroll.min.js"></script>
+    <!-- Locomotive Scroll -->
+    <link
+      rel="stylesheet"
+      href="style.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="nav">
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" onclick="toggleTheme()">
+      <span id="theme-icon">🌙</span>
+    </button>
+
+    <!-- Main Content -->
+    <main data-scroll-container>
+      <!-- Hero Section -->
+      <section id="home" class="hero" data-scroll-section>
+        <div class="container">
+          <div class="hero-content">
+            <h1 class="hero-title">Rabin Ka</h1>
+            <p class="hero-subtitle">
+              Creative UI/UX Designer & Frontend Developer crafting digital
+              experiences that inspire and engage.
+            </p>
+            <a href="#projects" class="hero-cta">
+              View My Work
+              <span>→</span>
+            </a>
+          </div>
+          <div class="hero-bg"></div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="bento-section" data-scroll-section>
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">About Me</h2>
+            <p class="section-description">
+              Passionate about creating meaningful digital experiences through
+              thoughtful design and clean code.
+            </p>
+          </div>
+
+          <div class="bento-grid">
+            <div class="bento-card about-card">
+              <h3
+                style="
+                  font-family: 'Sora', sans-serif;
+                  font-size: 2rem;
+                  margin-bottom: 1.5rem;
+                "
+              >
+                Hi there! 👋
+              </h3>
+              <p
+                style="
+                  font-size: 1.1rem;
+                  line-height: 1.8;
+                  color: var(--text-secondary);
+                  margin-bottom: 2rem;
+                "
+              >
+                I'm Alex Rivera, a multidisciplinary designer and developer with
+                over 7 years of experience creating digital products that users
+                love. My journey started with a degree in Graphic Design from
+                Parsons, and evolved into a passion for creating seamless
+                digital experiences that bridge the gap between aesthetics and
+                functionality.
+              </p>
+              <p
+                style="
+                  font-size: 1.1rem;
+                  line-height: 1.8;
+                  color: var(--text-secondary);
+                  margin-bottom: 2rem;
+                "
+              >
+                Currently, I lead design at Nova Labs, where I work with
+                startups and Fortune 500 companies to create impactful digital
+                experiences. My approach combines user-centered design
+                principles with technical expertise, ensuring that every pixel
+                serves a purpose and every interaction feels intuitive.
+              </p>
+              <div style="display: flex; gap: 1rem; flex-wrap: wrap">
+                <span
+                  style="
+                    background: var(--accent-gradient);
+                    color: white;
+                    padding: 0.5rem 1rem;
+                    border-radius: 1rem;
+                    font-size: 0.9rem;
+                  "
+                  >Design Thinking</span
+                >
+                <span
+                  style="
+                    background: var(--accent-gradient);
+                    color: white;
+                    padding: 0.5rem 1rem;
+                    border-radius: 1rem;
+                    font-size: 0.9rem;
+                  "
+                  >User Research</span
+                >
+                <span
+                  style="
+                    background: var(--accent-gradient);
+                    color: white;
+                    padding: 0.5rem 1rem;
+                    border-radius: 1rem;
+                    font-size: 0.9rem;
+                  "
+                  >Frontend Development</span
+                >
+                <span
+                  style="
+                    background: var(--accent-gradient);
+                    color: white;
+                    padding: 0.5rem 1rem;
+                    border-radius: 1rem;
+                    font-size: 0.9rem;
+                  "
+                  >Prototyping</span
+                >
+              </div>
+            </div>
+            <div class="bento-card about-image">
+              <img
+                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
+                alt="Alex Rivera portrait"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="bento-section" data-scroll-section>
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-description">
+              A selection of recent work that showcases my approach to design
+              and development.
+            </p>
+          </div>
+
+          <div class="projects-grid">
+            <div class="project-card">
+              <div class="project-image">
+                <img
+                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                  alt="Brand Identity Project"
+                />
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Zenith Brand System</h3>
+                <p class="project-description">
+                  Comprehensive brand identity for a sustainable fashion
+                  startup, including logo design, typography system, color
+                  palette, and brand guidelines documentation.
+                </p>
+                <div class="project-tags">
+                  <span class="project-tag">Brand Identity</span>
+                  <span class="project-tag">Visual Design</span>
+                  <span class="project-tag">Art Direction</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-image">
+                <img
+                  src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                  alt="Mobile Banking App"
+                />
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Horizon Banking App</h3>
+                <p class="project-description">
+                  End-to-end design of a mobile banking application focused on
+                  financial literacy, featuring customizable dashboards,
+                  spending analytics, and educational tools.
+                </p>
+                <div class="project-tags">
+                  <span class="project-tag">UI/UX Design</span>
+                  <span class="project-tag">Mobile App</span>
+                  <span class="project-tag">Prototyping</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-image">
+                <img
+                  src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                  alt="E-commerce Platform"
+                />
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Bloom E-commerce</h3>
+                <p class="project-description">
+                  Custom e-commerce platform for an independent bookstore,
+                  featuring personalized recommendations, AR book previews, and
+                  a community-driven review system.
+                </p>
+                <div class="project-tags">
+                  <span class="project-tag">Web Development</span>
+                  <span class="project-tag">E-commerce</span>
+                  <span class="project-tag">React</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills & Testimonial Section -->
+      <section id="skills" class="bento-section" data-scroll-section>
+        <div class="container">
+          <div class="bento-grid">
+            <div class="bento-card skills-card">
+              <h3
+                style="
+                  font-family: 'Sora', sans-serif;
+                  font-size: 2rem;
+                  margin-bottom: 1rem;
+                "
+              >
+                Skills & Tools
+              </h3>
+              <p style="color: var(--text-secondary); margin-bottom: 2rem">
+                Technologies and tools I use to bring ideas to life.
+              </p>
+              <div class="skills-grid">
+                <div class="skill-item">
+                  <div class="skill-icon">🎨</div>
+                  <div>Figma</div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-icon">⚛️</div>
+                  <div>React</div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-icon">💻</div>
+                  <div>TypeScript</div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-icon">🎭</div>
+                  <div>Framer</div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-icon">⚡</div>
+                  <div>Next.js</div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-icon">📱</div>
+                  <div>React Native</div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-icon">🎨</div>
+                  <div>Adobe CC</div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-icon">📊</div>
+                  <div>Webflow</div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-icon">🎪</div>
+                  <div>GSAP</div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-icon">📐</div>
+                  <div>Three.js</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bento-card testimonial-card">
+              <h3
+                style="
+                  font-family: 'Sora', sans-serif;
+                  font-size: 2rem;
+                  margin-bottom: 2rem;
+                "
+              >
+                What People Say
+              </h3>
+              <div class="testimonial-content">
+                <p class="testimonial-quote">
+                  "Alex transformed our digital presence with their exceptional
+                  design skills and technical expertise. They delivered a
+                  product that not only met but exceeded our expectations,
+                  resulting in a 40% increase in user engagement."
+                </p>
+                <div class="testimonial-author">Sarah Chen</div>
+                <div class="testimonial-role">Product Manager, TechCorp</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="bento-section" data-scroll-section>
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Let's Work Together</h2>
+            <p class="section-description">
+              Ready to bring your ideas to life? Let's start a conversation.
+            </p>
+          </div>
+
+          <div class="bento-grid">
+            <div class="bento-card contact-card">
+              <h3
+                style="
+                  font-family: 'Sora', sans-serif;
+                  font-size: 1.5rem;
+                  margin-bottom: 1rem;
+                "
+              >
+                Send me a message
+              </h3>
+              <form class="contact-form">
+                <div class="form-group">
+                  <label class="form-label">Name</label>
+                  <input
+                    type="text"
+                    class="form-input"
+                    placeholder="Your name"
+                  />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Email</label>
+                  <input
+                    type="email"
+                    class="form-input"
+                    placeholder="your@email.com"
+                  />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Message</label>
+                  <textarea
+                    class="form-input form-textarea"
+                    placeholder="Tell me about your project..."
+                  ></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+              </form>
+            </div>
+
+            <div class="bento-card social-card">
+              <h3
+                style="
+                  font-family: 'Sora', sans-serif;
+                  font-size: 1.5rem;
+                  margin-bottom: 1rem;
+                "
+              >
+                Connect with me
+              </h3>
+              <div class="social-links">
+                <a href="mailto:alex@rivera.design" class="social-link">
+                  <span>📧</span>
+                  <span>alex@rivera.design</span>
+                </a>
+                <a
+                  href="https://linkedin.com/in/alexrivera"
+                  target="_blank"
+                  class="social-link"
+                >
+                  <span>💼</span>
+                  <span>LinkedIn</span>
+                </a>
+                <a
+                  href="https://github.com/alexrivera"
+                  target="_blank"
+                  class="social-link"
+                >
+                  <span>🐙</span>
+                  <span>GitHub</span>
+                </a>
+                <a
+                  href="https://dribbble.com/alexrivera"
+                  target="_blank"
+                  class="social-link"
+                >
+                  <span>🎨</span>
+                  <span>Dribbble</span>
+                </a>
+                <a
+                  href="https://twitter.com/alexrivera"
+                  target="_blank"
+                  class="social-link"
+                >
+                  <span>🐦</span>
+                  <span>Twitter</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      // Theme Toggle
+      function toggleTheme() {
+        const html = document.documentElement;
+        const themeIcon = document.getElementById("theme-icon");
+
+        if (html.getAttribute("data-theme") === "dark") {
+          html.removeAttribute("data-theme");
+          themeIcon.textContent = "🌙";
+          localStorage.setItem("theme", "light");
+        } else {
+          html.setAttribute("data-theme", "dark");
+          themeIcon.textContent = "☀️";
+          localStorage.setItem("theme", "dark");
+        }
+      }
+
+      // Initialize theme
+      function initTheme() {
+        const savedTheme = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches;
+
+        if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
+          document.documentElement.setAttribute("data-theme", "dark");
+          document.getElementById("theme-icon").textContent = "☀️";
+        }
+      }
+
+      // Initialize Locomotive Scroll with Fallback
+      let scroll = null;
+      function initLocomotiveScroll() {
+        if (typeof LocomotiveScroll === "undefined") {
+          console.warn(
+            "LocomotiveScroll not loaded. Falling back to native scrolling."
+          );
+          fallbackToNativeScrolling();
+          return;
+        }
+
+        const scrollContainer = document.querySelector(
+          "[data-scroll-container]"
+        );
+        if (!scrollContainer) {
+          console.error(
+            "Scroll container not found. Falling back to native scrolling."
+          );
+          fallbackToNativeScrolling();
+          return;
+        }
+
+        try {
+          scroll = new LocomotiveScroll({
+            el: scrollContainer,
+            smooth: true,
+            multiplier: 0.8,
+            lerp: 0.08,
+            smartphone: { smooth: false },
+            tablet: { smooth: false },
+          });
+
+          scroll.on("scroll", ScrollTrigger.update);
+          ScrollTrigger.scrollerProxy("[data-scroll-container]", {
+            scrollTop(value) {
+              return arguments.length
+                ? scroll.scrollTo(value, { duration: 0, disableLerp: true })
+                : scroll.scroll.instance.scroll.y;
+            },
+            getBoundingClientRect() {
+              return {
+                top: 0,
+                left: 0,
+                width: window.innerWidth,
+                height: window.innerHeight,
+              };
+            },
+            pinType: scrollContainer.style.transform ? "transform" : "fixed",
+          });
+
+          ScrollTrigger.addEventListener("refresh", () => scroll.update());
+          ScrollTrigger.defaults({ scroller: "[data-scroll-container]" });
+          ScrollTrigger.refresh();
+        } catch (error) {
+          console.error(
+            "Failed to initialize LocomotiveScroll:",
+            error.message
+          );
+          fallbackToNativeScrolling();
+        }
+      }
+
+      // Fallback to Native Scrolling
+      function fallbackToNativeScrolling() {
+        document.querySelectorAll("[data-scroll-container]").forEach((el) => {
+          el.style.overflow = "auto";
+          el.style.height = "auto";
+        });
+        document.body.style.overflow = "auto";
+        initSmoothScrollLinksFallback();
+        initActiveNavigationFallback();
+      }
+
+      // GSAP Animations with Fallback
+      function initAnimations() {
+        if (
+          typeof gsap === "undefined" ||
+          typeof ScrollTrigger === "undefined"
+        ) {
+          console.warn(
+            "GSAP or ScrollTrigger not loaded. Skipping animations."
+          );
+          return;
+        }
+
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Minimal animations to avoid hiding text
+        gsap.from(".nav", {
+          duration: 1,
+          y: -100,
+          ease: "power3.out",
+          onComplete: () => gsap.set(".nav", { clearProps: "all" }),
+        });
+
+        gsap.from(".theme-toggle", {
+          duration: 0.8,
+          scale: 0,
+          ease: "back.out(1.7)",
+          onComplete: () => gsap.set(".theme-toggle", { clearProps: "all" }),
+        });
+      }
+
+      // Smooth scrolling for navigation links
+      function initSmoothScrollLinks() {
+        if (!scroll) {
+          initSmoothScrollLinksFallback();
+          return;
+        }
+
+        document.querySelectorAll(".nav-link").forEach((link) => {
+          link.addEventListener("click", (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute("href");
+            scroll.scrollTo(targetId);
+            document
+              .querySelectorAll(".nav-link")
+              .forEach((l) => l.classList.remove("active"));
+            link.classList.add("active");
+          });
+        });
+      }
+
+      // Fallback Smooth Scroll Links
+      function initSmoothScrollLinksFallback() {
+        document.querySelectorAll(".nav-link").forEach((link) => {
+          link.addEventListener("click", (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute("href");
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              targetElement.scrollIntoView({ behavior: "smooth" });
+            }
+            document
+              .querySelectorAll(".nav-link")
+              .forEach((l) => l.classList.remove("active"));
+            link.classList.add("active");
+          });
+        });
+      }
+
+      // Active navigation link on scroll
+      function initActiveNavigation() {
+        if (!scroll) {
+          initActiveNavigationFallback();
+          return;
+        }
+
+        scroll.on("scroll", () => {
+          const sections = document.querySelectorAll("section[id]");
+          let current = "";
+          sections.forEach((section) => {
+            const rect = section.getBoundingClientRect();
+            if (rect.top <= 300 && rect.bottom > 300) {
+              current = section.getAttribute("id");
+            }
+          });
+          document.querySelectorAll(".nav-link").forEach((link) => {
+            link.classList.toggle(
+              "active",
+              link.getAttribute("href") === `#${current}`
+            );
+          });
+        });
+      }
+
+      // Fallback Active Navigation
+      function initActiveNavigationFallback() {
+        window.addEventListener("scroll", () => {
+          const sections = document.querySelectorAll("section[id]");
+          let current = "";
+          sections.forEach((section) => {
+            const rect = section.getBoundingClientRect();
+            if (rect.top <= 300 && rect.bottom > 300) {
+              current = section.getAttribute("id");
+            }
+          });
+          document.querySelectorAll(".nav-link").forEach((link) => {
+            link.classList.toggle(
+              "active",
+              link.getAttribute("href") === `#${current}`
+            );
+          });
+        });
+      }
+
+      // Form submission
+      function initContactForm() {
+        const form = document.querySelector(".contact-form");
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+
+          const submitBtn = form.querySelector(".submit-btn");
+          const originalText = submitBtn.textContent;
+
+          submitBtn.textContent = "Sending...";
+          submitBtn.disabled = true;
+
+          setTimeout(() => {
+            submitBtn.textContent = "Message Sent!";
+            setTimeout(() => {
+              submitBtn.textContent = originalText;
+              submitBtn.disabled = false;
+              form.reset();
+            }, 2000);
+          }, 1500);
+        });
+      }
+
+      // Testimonial rotation
+      function initTestimonialRotation() {
+        if (typeof gsap === "undefined") {
+          console.warn("GSAP not loaded. Skipping testimonial rotation.");
+          return;
+        }
+
+        const testimonials = [
+          {
+            quote:
+              "Alex brought our vision to life with incredible attention to detail and user experience. The final product exceeded all expectations.",
+            author: "Sarah Chen",
+            role: "Product Manager, TechCorp",
+          },
+          {
+            quote:
+              "Working with Alex was a game-changer for our startup. The design thinking and technical execution were outstanding.",
+            author: "Michael Rodriguez",
+            role: "CEO, InnovateNow",
+          },
+          {
+            quote:
+              "Alex's ability to translate complex ideas into intuitive interfaces is remarkable. Highly recommended!",
+            author: "Emily Johnson",
+            role: "Design Director, CreativeLab",
+          },
+        ];
+
+        let currentTestimonial = 0;
+        const testimonialQuote = document.querySelector(".testimonial-quote");
+        const testimonialAuthor = document.querySelector(".testimonial-author");
+        const testimonialRole = document.querySelector(".testimonial-role");
+
+        function rotateTestimonial() {
+          gsap.to(".testimonial-content", {
+            opacity: 0,
+            duration: 0.5,
+            ease: "power2.out",
+            onComplete: () => {
+              currentTestimonial =
+                (currentTestimonial + 1) % testimonials.length;
+              const testimonial = testimonials[currentTestimonial];
+
+              testimonialQuote.textContent = testimonial.quote;
+              testimonialAuthor.textContent = testimonial.author;
+              testimonialRole.textContent = testimonial.role;
+
+              gsap.to(".testimonial-content", {
+                opacity: 1,
+                duration: 0.5,
+                ease: "power2.out",
+              });
+            },
+          });
+        }
+
+        setInterval(rotateTestimonial, 5000);
+      }
+
+      // Initialize everything when DOM is loaded
+      document.addEventListener("DOMContentLoaded", () => {
+        initTheme();
+        initLocomotiveScroll();
+        initAnimations();
+        initSmoothScrollLinks();
+        initActiveNavigation();
+        initContactForm();
+        initTestimonialRotation();
+      });
+
+      // Handle window resize
+      window.addEventListener("resize", () => {
+        if (scroll) scroll.update();
+        if (typeof ScrollTrigger !== "undefined") ScrollTrigger.refresh();
+      });
+
+      // Ensure content is visible after page load
+      window.addEventListener("load", () => {
+        document.body.style.opacity = "1";
+        if (scroll) scroll.update();
+        if (typeof ScrollTrigger !== "undefined") ScrollTrigger.refresh();
+      });
+    </script>
+  </body>
+</html>
