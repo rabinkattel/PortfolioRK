@@ -27,10 +27,11 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/locomotive-scroll/4.1.4/locomotive-scroll.min.css"
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/locomotive-scroll/4.1.4/locomotive-scroll.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="style.css"
-    />
+
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- Navigation and Theme Toggle -->
@@ -169,7 +170,7 @@
           </div>
 
           <div class="projects-grid">
-            <div class="project-card">
+            <div class="project-card" onclick="openPopup('logos')">
               <div class="project-image">
                 <img src="img/img-041.jpg" alt="Visionary Branding" />
               </div>
@@ -187,7 +188,7 @@
               </div>
             </div>
 
-            <div class="project-card">
+            <div class="project-card" onclick="openPopup('social-media')">
               <div class="project-image">
                 <img src="img/img-031.jpg" alt="Social Media Graphics" />
               </div>
@@ -205,7 +206,7 @@
               </div>
             </div>
 
-            <div class="project-card">
+            <div class="project-card" onclick="openPopup('print-design')">
               <div class="project-image">
                 <img src="img/img-014.jpg" alt="Printable Designs" />
               </div>
@@ -223,7 +224,7 @@
               </div>
             </div>
 
-            <div class="project-card">
+            <div class="project-card" onclick="openPopup('packaging')">
               <div class="project-image">
                 <img src="img/img-012.jpg" alt="Packaging Design" />
               </div>
@@ -241,7 +242,7 @@
               </div>
             </div>
 
-            <div class="project-card">
+            <div class="project-card" onclick="openPopup('illustrations')">
               <div class="project-image">
                 <img src="img/img-013.jpg" alt="Digital Illustrations" />
               </div>
@@ -259,7 +260,7 @@
               </div>
             </div>
 
-            <div class="project-card">
+            <div class="project-card" onclick="openPopup('editorial')">
               <div class="project-image">
                 <img src="img/img-06.jpg" alt="Editorial Design" />
               </div>
@@ -280,60 +281,98 @@
         </div>
       </section>
 
+      <!-- Popup Modal -->
+      <div id="project-popup" class="popup">
+        <div class="popup-content">
+          <span class="popup-close" onclick="closePopup()">&times;</span>
+          <h2 id="popup-title" class="popup-title"></h2>
+          <p id="popup-description"></p>
+          <div id="popup-images" class="popup-grid"></div>
+        </div>
+      </div>
+
       <!-- Skills & Testimonial Section -->
       <section id="skills" class="bento-section" data-scroll-section>
         <div class="container">
-          <div class="bento-grid">
-            <div class="bento-card skills-card">
+          <div class="bento-grid" style="gap: 1rem">
+            <div class="bento-card skills-card" style="padding: 1.5rem">
               <h3
                 style="
                   font-family: 'Sora', sans-serif;
-                  font-size: 2rem;
-                  margin-bottom: 1rem;
+                  font-size: 1.5rem;
+                  margin-bottom: 0.5rem;
                 "
               >
                 Skills & Expertise
               </h3>
-              <p style="color: var(--text-secondary); margin-bottom: 2rem">
-                Areas of expertise I use to bring ideas to life
+              <p
+                style="
+                  color: var(--text-secondary);
+                  margin-bottom: 1rem;
+                  font-size: 0.9rem;
+                "
+              >
+                Tools and expertise I use to create impactful designs
               </p>
               <div class="skills-grid">
-                <div class="skill-item">
-                  <div class="skill-icon">🎨</div>
-                  <div>Branding</div>
+                <div class="skill-item" style="padding: 1rem">
+                  <div class="skill-icon" style="font-size: 1.5rem">🎨</div>
+                  <div style="font-size: 0.85rem">Branding</div>
                 </div>
-                <div class="skill-item">
-                  <div class="skill-icon">📱</div>
-                  <div>Social Media Design</div>
+                <div class="skill-item" style="padding: 1rem">
+                  <div class="skill-icon" style="font-size: 1.5rem">📱</div>
+                  <div style="font-size: 0.85rem">Social Media Design</div>
                 </div>
-                <div class="skill-item">
-                  <div class="skill-icon">🖨️</div>
-                  <div>Print Design</div>
+                <div class="skill-item" style="padding: 1rem">
+                  <div class="skill-icon" style="font-size: 1.5rem">🖨️</div>
+                  <div style="font-size: 0.85rem">Print Design</div>
                 </div>
-                <div class="skill-item">
-                  <div class="skill-icon">📦</div>
-                  <div>Packaging Design</div>
+                <div class="skill-item" style="padding: 1rem">
+                  <div class="skill-icon" style="font-size: 1.5rem">📦</div>
+                  <div style="font-size: 0.85rem">Packaging Design</div>
+                </div>
+                <div class="skill-item" style="padding: 1rem">
+                  <div class="skill-icon" style="font-size: 1.5rem">🖌️</div>
+                  <div style="font-size: 0.85rem">Photoshop</div>
+                </div>
+                <div class="skill-item" style="padding: 1rem">
+                  <div class="skill-icon" style="font-size: 1.5rem">✍️</div>
+                  <div style="font-size: 0.85rem">Illustrator</div>
+                </div>
+                <div class="skill-item" style="padding: 1rem">
+                  <div class="skill-icon" style="font-size: 1.5rem">📄</div>
+                  <div style="font-size: 0.85rem">InDesign</div>
+                </div>
+                <div class="skill-item" style="padding: 1rem">
+                  <div class="skill-icon" style="font-size: 1.5rem">🎨</div>
+                  <div style="font-size: 0.85rem">Canva</div>
                 </div>
               </div>
             </div>
 
-            <div class="bento-card testimonial-card">
+            <div class="bento-card testimonial-card" style="padding: 1.5rem">
               <h3
                 style="
                   font-family: 'Sora', sans-serif;
-                  font-size: 2rem;
-                  margin-bottom: 2rem;
+                  font-size: 1.5rem;
+                  margin-bottom: 0.5rem;
                 "
               >
                 Client Feedback
               </h3>
-              <div class="testimonial-content">
-                <p class="testimonial-quote">
-                  "The social media graphics Rabin designed significantly
-                  boosted our engagement rates."
+              <div class="testimonial-content" style="padding: 0.5rem">
+                <p
+                  class="testimonial-quote"
+                  style="font-size: 1rem; line-height: 1.5"
+                >
+                  "Rabin’s designs boosted our brand’s engagement."
                 </p>
-                <div class="testimonial-author">Babin Kharel</div>
-                <div class="testimonial-role">Manager, Maverick Pvt. Ltd.</div>
+                <div class="testimonial-author" style="font-size: 0.9rem">
+                  Babin Kharel
+                </div>
+                <div class="testimonial-role" style="font-size: 0.8rem">
+                  Manager, Maverick Pvt. Ltd.
+                </div>
               </div>
             </div>
           </div>
@@ -361,31 +400,45 @@
               >
                 Send me a message
               </h3>
-              <form class="contact-form">
+              <form id="contact-form" class="contact-form">
                 <div class="form-group">
-                  <label class="form-label">Name</label>
+                  <label class="form-label" for="name">Name</label>
                   <input
                     type="text"
+                    id="name"
                     class="form-input"
                     placeholder="Your name"
+                    required
                   />
                 </div>
                 <div class="form-group">
-                  <label class="form-label">Email</label>
+                  <label class="form-label" for="email">Email</label>
                   <input
                     type="email"
+                    id="email"
                     class="form-input"
                     placeholder="your@email.com"
+                    required
                   />
                 </div>
                 <div class="form-group">
-                  <label class="form-label">Message</label>
+                  <label class="form-label" for="message">Message</label>
                   <textarea
+                    id="message"
                     class="form-input form-textarea"
                     placeholder="Tell me about your project..."
+                    required
                   ></textarea>
                 </div>
                 <button type="submit" class="submit-btn">Send Message</button>
+                <p
+                  id="form-message"
+                  style="
+                    margin-top: 1rem;
+                    color: var(--text-secondary);
+                    display: none;
+                  "
+                ></p>
               </form>
             </div>
 
@@ -445,6 +498,11 @@
     </main>
 
     <script>
+      // Initialize EmailJS
+      (function () {
+        emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS Public Key
+      })();
+
       // Theme Toggle
       function toggleTheme() {
         const html = document.documentElement;
@@ -479,6 +537,131 @@
         } else {
           aboutPortrait.src = "img/rabin-reg.png";
         }
+      }
+
+      // Popup Functionality
+      function openPopup(category) {
+        const popup = document.getElementById("project-popup");
+        const popupTitle = document.getElementById("popup-title");
+        const popupDescription = document.getElementById("popup-description");
+        const popupImages = document.getElementById("popup-images");
+
+        // Define image paths and descriptions for each category
+        const imageCollections = {
+          logos: {
+            images: [
+              "img/logo/logo1.jpg",
+              "img/logo/logo3.png",
+              "img/logo/logo4.png",
+              "img/logo/logo2.png",
+            ],
+            description:
+              "Crafting bold logos and cohesive visual identities to elevate your brand.",
+          },
+          "social-media": {
+            images: [
+              "img/social-media/social1.jpeg",
+              "img/social-media/social4.jpg",
+              "img/social-media/social3.jpg",
+              "img/social-media/social2.jpeg",
+            ],
+            description:
+              "Eye-catching visuals designed to boost engagement across social platforms.",
+          },
+          "print-design": {
+            images: [
+              "img/print-design/print1.jpg",
+              "img/print-design/print2.jpg",
+              "img/print-design/print3.jpg",
+              "img/print-design/print4.jpg",
+            ],
+            description:
+              "Stunning posters and flyers that make a lasting impression.",
+          },
+          packaging: {
+            images: [
+              "img/packaging/pack3.jpg",
+              "img/packaging/pack2.jpg",
+              "img/packaging/pack1.jpg",
+              "img/packaging/pack4.jpg",
+            ],
+            description:
+              "Innovative packaging that blends aesthetics with functionality.",
+          },
+          illustrations: {
+            images: [
+              "img/illustrations/ill1.jpg",
+              "img/illustrations/ill2.jpg",
+              "img/illustrations/ill3.jpg",
+              "img/illustrations/ill4.jpg",
+            ],
+            description:
+              "Vibrant illustrations bringing stories and concepts to life.",
+          },
+          editorial: {
+            images: [
+              "img/editorial/edit1.jpg",
+              "img/editorial/edit2.jpg",
+              "img/editorial/edit3.jpg",
+              "img/editorial/edit4.jpg",
+            ],
+            description:
+              "Compelling layouts for magazines and brochures that captivate readers.",
+          },
+        };
+
+        // Set popup title and description based on category
+        const titles = {
+          logos: "Logo and Branding",
+          "social-media": "Social Media Graphics",
+          "print-design": "Printable Designs",
+          packaging: "Packaging Design",
+          illustrations: "Digital Illustrations",
+          editorial: "Editorial Design",
+        };
+
+        popupTitle.textContent = titles[category] || "Project Gallery";
+        popupDescription.textContent =
+          imageCollections[category]?.description ||
+          "Explore my creative projects.";
+        popupImages.innerHTML = "";
+
+        // Add images to popup in a 2x2 grid
+        const images = imageCollections[category]?.images || [];
+        images.forEach((src, index) => {
+          const img = document.createElement("img");
+          img.src = src;
+          img.alt = `${titles[category]} image ${index + 1}`;
+          img.classList.add("popup-image");
+          popupImages.appendChild(img);
+        });
+
+        // Show popup with GSAP animation
+        popup.style.display = "flex";
+        gsap.fromTo(
+          ".popup-content",
+          { scale: 0.8, opacity: 0 },
+          { scale: 1, opacity: 1, duration: 0.5, ease: "power2.out" }
+        );
+
+        // Disable scrolling
+        document.body.style.overflow = "hidden";
+        if (scroll) scroll.stop();
+      }
+
+      function closePopup() {
+        const popup = document.getElementById("project-popup");
+        gsap.to(".popup-content", {
+          scale: 0.8,
+          opacity: 0,
+          duration: 0.3,
+          ease: "power2.in",
+          onComplete: () => {
+            popup.style.display = "none";
+            document.body.style.overflow = "auto";
+            if (scroll) scroll.start();
+          },
+        });
       }
 
       // Initialize Locomotive Scroll with Fallback
@@ -662,24 +845,53 @@
 
       // Form submission
       function initContactForm() {
-        const form = document.querySelector(".contact-form");
+        const form = document.getElementById("contact-form");
+        const submitBtn = form.querySelector(".submit-btn");
+        const formMessage = document.getElementById("form-message");
+
         form.addEventListener("submit", (e) => {
           e.preventDefault();
 
-          const submitBtn = form.querySelector(".submit-btn");
-          const originalText = submitBtn.textContent;
+          // Validate form inputs
+          const name = document.getElementById("name").value.trim();
+          const email = document.getElementById("email").value.trim();
+          const message = document.getElementById("message").value.trim();
 
+          if (!name || !email || !message) {
+            formMessage.textContent = "Please fill out all fields.";
+            formMessage.style.color = "#ff6b6b";
+            formMessage.style.display = "block";
+            return;
+          }
+
+          // Disable button and show sending state
           submitBtn.textContent = "Sending...";
           submitBtn.disabled = true;
+          formMessage.style.display = "none";
 
-          setTimeout(() => {
-            submitBtn.textContent = "Message Sent!";
-            setTimeout(() => {
-              submitBtn.textContent = originalText;
-              submitBtn.disabled = false;
+          // Send email using EmailJS
+          emailjs
+            .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", form)
+            .then(() => {
+              formMessage.textContent = "Message Sent!";
+              formMessage.style.color = "var(--accent-primary)";
+              formMessage.style.display = "block";
               form.reset();
-            }, 2000);
-          }, 1500);
+              setTimeout(() => {
+                submitBtn.textContent = "Send Message";
+                submitBtn.disabled = false;
+                formMessage.style.display = "none";
+              }, 2000);
+            })
+            .catch((error) => {
+              console.error("EmailJS Error:", error);
+              formMessage.textContent =
+                "Failed to send message. Please try again later.";
+              formMessage.style.color = "#ff6b6b";
+              formMessage.style.display = "block";
+              submitBtn.textContent = "Send Message";
+              submitBtn.disabled = false;
+            });
         });
       }
 
@@ -693,15 +905,27 @@
         const testimonials = [
           {
             quote:
-              "The social media graphics Rabin designed significantly boosted our engagement rates.",
+              "Rabin’s designs boosted our brand’s engagement significantly. His ability to understand our vision and translate it into visuals that connected with our audience was outstanding. The campaigns he worked on delivered results beyond what we anticipated.",
             author: "Babin Kharel",
             role: "Manager, Maverick Pvt. Ltd.",
           },
           {
             quote:
-              "Rabin’s work on our logo has given boosted our studio's identification, exceeding our expectations.",
+              "Rabin’s logo work exceeded our expectations in every way. He took the time to understand our brand story and crafted a design that not only looks visually appealing but also represents our values and identity perfectly. We still get compliments on it today.",
             author: "Roshan Kattel",
             role: "Creative Director, Raw's Production",
+          },
+          {
+            quote:
+              "Rabin’s social media visuals were a complete game-changer for us. His creativity and attention to detail made our posts stand out in a crowded space, increasing both reach and engagement. He brought fresh energy to our online presence.",
+            author: "Rejil Shrestha",
+            role: "Creative Lead, Zamac Nepal",
+          },
+          {
+            quote:
+              "Rabin’s creativity truly transformed our brand identity. From conceptualization to execution, he delivered designs that gave our business a modern and cohesive look. His work has helped us stand out in a competitive market and connect better with our clients.",
+            author: "Kiran Nakarme",
+            role: "Director, The Box Hub",
           },
         ];
 
@@ -732,6 +956,11 @@
             },
           });
         }
+
+        // Initial display of the first testimonial
+        testimonialQuote.textContent = testimonials[0].quote;
+        testimonialAuthor.textContent = testimonials[0].author;
+        testimonialRole.textContent = testimonials[0].role;
 
         setInterval(rotateTestimonial, 5000);
       }
